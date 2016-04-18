@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no,target-densityDpi=device-dpi" />
+    <!--最后一个兼容安卓低版本-->
+    <title></title>
+    <style>
+        *{ margin:0;padding: 0;}
+        #main{ width: 640px;height: 960px;position: relative;overflow: hidden }
+        #list{}
+        #list>li{ width: 100%;height: 100%;position: absolute; left: 0;top:0; background-size: cover; }
+        #list>li:first-child{ background-image: url("img/b.png") }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <ul id="list">
+            <li></li>
+        </ul>
+    </div>
+</body>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script>
+    var $main = $("#main"),
+        $list = $("#list"),
+        $li = $list.find(">li");
+
+    var viewHeight = $(window).height();
+    $main.css( "height" , viewHeight );
+</script>
+</html>
